@@ -1,5 +1,6 @@
 package utils;
 
+import com.codeborne.pdftest.PDF;
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.hwpf.HWPFDocument;
 import org.apache.poi.hwpf.extractor.WordExtractor;
@@ -21,6 +22,10 @@ public class Files {
 
     public static File getFileFromPath(String path) {
         return new File(path);
+    }
+
+    public static PDF getPdfFromPath(String path) throws IOException {
+        return new PDF(getFileFromPath(path));
     }
 
     public static String readTextFromDocFile(File file) throws IOException {

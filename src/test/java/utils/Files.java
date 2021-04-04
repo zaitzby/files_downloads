@@ -1,6 +1,7 @@
 package utils;
 
 import com.codeborne.pdftest.PDF;
+import com.codeborne.xlstest.XLS;
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.hwpf.HWPFDocument;
 import org.apache.poi.hwpf.extractor.WordExtractor;
@@ -26,6 +27,10 @@ public class Files {
 
     public static PDF getPdfFromPath(String path) throws IOException {
         return new PDF(getFileFromPath(path));
+    }
+
+    public static XLS getXLSXFromPath(String path){
+        return new XLS(getFileFromPath(path));
     }
 
     public static String readTextFromDocFile(File file) throws IOException {

@@ -7,6 +7,7 @@ public class Zip {
 
     public static void unZip(String path, String unzipPath, String pass) throws ZipException {
         ZipFile zipFile = new ZipFile(path);
+
         if (zipFile.isEncrypted()) {
             zipFile.setPassword(pass);
         }

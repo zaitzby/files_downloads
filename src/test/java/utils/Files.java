@@ -6,7 +6,6 @@ import org.apache.commons.io.FileUtils;
 import org.apache.poi.hwpf.HWPFDocument;
 import org.apache.poi.hwpf.extractor.WordExtractor;
 
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -37,6 +36,7 @@ public class Files {
         FileInputStream fis = new FileInputStream(file);
         HWPFDocument document = new HWPFDocument(fis);
         WordExtractor extractor = new WordExtractor(document);
+
         fis.close();
         return extractor.getText();
     }

@@ -19,10 +19,9 @@ public class ZipFilesTests {
         String password = "fox";
         String fileUnzipPath = "src/resources/unzip/Document_txt.txt";
         String expectedText = "This is fox txt unzip file";
-
-        unZip(filePath, unzipPath, password);
         String actualText = readTextFromPath(fileUnzipPath);
 
+        unZip(filePath, unzipPath, password);
         assertThat(actualText, containsString(expectedText));
     }
 }

@@ -15,6 +15,7 @@ public class DocFilesTests {
         String filePath = "src/resources/Document_doc.doc";
         String expectedText = "This is fox doc file";
         String actualText = readTextFromDocFile(getFileFromPath(filePath));
+
         assertThat(actualText,containsString(expectedText));
     }
 }

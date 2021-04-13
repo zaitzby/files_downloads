@@ -12,7 +12,7 @@ public class DocFilesTests {
 
     @Test
     public void docTest() throws IOException {
-        String filePath = "src/resources/Document_doc.doc";
+        String filePath = "src/test/resources/Document_doc.doc";
         String expectedText = "This is fox doc file";
         String actualText = readTextFromDocFile(getFileFromPath(filePath));
 

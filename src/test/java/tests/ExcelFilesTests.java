@@ -20,7 +20,7 @@ public class ExcelFilesTests {
 
     @Test
     public void xlsxCellTest() {
-        String filePath = "src/resources/Document_xlsx.xlsx";
+        String filePath = "src/test/resources/Document_xlsx.xlsx";
         String expectedText = "get file quickly";
         XLS xlsx = getXLSXFromPath(filePath);
         String actualText = xlsx.excel.getSheetAt(0).getRow(2).getCell(2).getStringCellValue();

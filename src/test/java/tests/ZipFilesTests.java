@@ -14,14 +14,15 @@ public class ZipFilesTests {
 
     @Test
     public void zipTest() throws IOException, ZipException {
-        String filePath = "src/resources/Document_zip.zip";
-        String unzipPath = "src/resources/unzip";
+        String filePath = "src/test/resources/Document_zip.zip";
+        String unzipPath = "build/unzip";
         String password = "fox";
-        String fileUnzipPath = "src/resources/unzip/Document_txt.txt";
+        String fileUnzipPath = "build/unzip/Document_txt.txt";
         String expectedText = "This is fox txt unzip file";
-        String actualText = readTextFromPath(fileUnzipPath);
 
         unZip(filePath, unzipPath, password);
+        String actualText = readTextFromPath(fileUnzipPath);
+
         assertThat(actualText, containsString(expectedText));
     }
 }

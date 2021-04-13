@@ -12,7 +12,7 @@ public class PdfFilesTests {
 
     @Test
     public void pdfTest() throws IOException {
-        String filePath = "src/resources/Document_pdf.pdf";
+        String filePath = "src/test/resources/Document_pdf.pdf";
         String expectedText = "This is fox pdf file";
 
         assertThat(getPdfFromPath(filePath), containsExactText(expectedText));
